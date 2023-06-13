@@ -1,2 +1,2 @@
 #!/bin/bash
-(set -o posix && set) | (cat | less)
+env | grep -E "^\w+=" | cut -d= -f1 | sort | less
